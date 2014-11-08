@@ -1,0 +1,66 @@
+Once upon a time there was a server request Alpha
+
+And a server MagicalIsland
+
+One fine evening Alpha wanted to access the registration process
+	granting MagicalIsland a passwd "somePasswd"
+	granting MagicalIsland an email "charmalicious@candyKingdom.com"
+
+Alpha is denied the registration due to a lacking name
+
+One fine evening Alpha wanted to access the registration process
+	granting MagicalIsland its accountname "charmingPrince"
+	granting MagicalIsland a passwd "somePasswd"
+
+Alpha is denied the registration due to a lacking email
+
+One fine evening Alpha wanted to access the registration process
+	granting MagicalIsland its accountname "charmingPrince"
+	granting MagicalIsland an email "charmalicious@candyKingdom.com"
+
+Alpha is denied the registration due to a lacking email
+
+One fine evening Alpha wanted to access the registration process
+	granting MagicalIsland its accountname "charmingPrince"
+	granting MagicalIsland a passwd "somePasswd"
+	granting MagicalIsland an email "charmalicious@candyKingdom.com"
+
+MagicalIsland now has a user "charmingPrince"
+
+Alpha then continued to access the login process
+	granting MagicalIsland an accountname "charmingPrince"
+	granting MagicalIsland a loginPasswd "somePasswd"
+
+Alpha can now access the User-Area of MagicalIsland
+
+Then along came a server request Beta
+
+One fine evening Beta wanted to access the registration process
+	granting MagicalIsland its accountname "charmingPrince"
+	granting MagicalIsland a passwd "somePasswd"
+	granting MagicalIsland an email "beta@candyKingdom.com"
+
+Beta is denied the registration due to the userName being taken
+
+One fine evening Beta wanted to access the registration process
+	granting MagicalIsland its accountname "beta"
+	granting MagicalIsland a passwd "somePasswd"
+	granting MagicalIsland an email "charmalicious@candyKingdom.com"
+
+Beta is denied the registration due to the email being taken
+
+Beta then continued to access the login process
+	granting MagicalIsland an accountname "doesNotExist"
+
+Beta is kicked out of the magical CandyKingdom of MagicalIsland due to a lacking password
+
+Beta then continued to access the login process
+	granting MagicalIsland a longinPasswd "wrongPasswd"
+
+Beta is kicked out of the magical CandyKingdom of MagicalIsland due to a lacking name
+
+Beta then continued to access the login process
+	granting MagicalIsland an accountname "doesNotExist"
+	granting MagicalIsland a longinPasswd "wrongPasswd"
+
+Beta is kicked out of the magical CandyKingdom of MagicalIsland due to wrong

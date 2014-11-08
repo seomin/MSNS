@@ -1,0 +1,27 @@
+GOAL/INVERSE GOAL:
+  - Inverses Ziel ist ein gutes "Werkzeug", nur ist uns in diesem Fall einfach nicht mehr eingefallen, als "eine IDE nachbauen"
+  - Da Funktionalitäten und Ziel nicht leicht zu trennen sind, kleben letztere größtenteils mit bei GOAL
+  
+SYSTEM USERS:
+  - siehe auch bei GOAL
+  
+RESOURCES:
+  - trifft bei uns schlicht und ergreifend nicht wirklich zu
+  - bis auf zeitlicher Richtwert (15h)
+  - Expertise kaum vorhanden (noch nicht :D)
+
+PROJECT STATUS WITHIN SCHEDULE:
+  - Bis auf feste Termine des Lehrstuhls steht keine Zeitplan fest, da wir agil entwickeln
+  
+DOMAIN MODEL:
+  - Siehe Anwendungsfalldiagramm und Komponentendiagramm auf Webseite
+ 
+RISKS:
+  - Risiken und Inverses Ziel sind häufig redundant, vllt. besser zusammenzulegen...?
+ 
+SUCCESS INDICATORS/CRITERIA:
+  - Wichtiges Werkzeug, nur bei uns schwer spezifizierbar, da wir das Projekt nicht lange genug begleiten werden
+
+QUESTIONS/ANSWERS:
+  - Mechanismus zum Sicherstellen des Verständnisses der Antworten (Wiederholung der Antwort, bis der Kunde bestätigt) ist nützlich!
+  - Durch die Bearbeitung des Canvas' klären sich aber eigentlich alle Fragen
