@@ -2,8 +2,17 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-# Home page
-GET     /                           controllers.Application.index()
+GET         /                      controllers.MainController.index(path = "")
+GET         /events                controllers.MainController.events
 
-# Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.at(path="/public", file)
+GET         /message               controllers.MessageController.getMessages(page: Int ?= 0, perPage: Int ?= 10)
+POST        /message               controllers.MessageController.saveMessage
+
+# Webjars, requirejs, routes and other assets
+GET         /lib/require.js        controllers.WebJarAssets.requirejs
+GET         /webjars/*file         controllers.WebJarAssets.at(file)
+GET         /assets/*file          controllers.Assets.at(path="/public", file)
+GET         /routes.js             controllers.MainController.router
+
+# Every other page
+GET         /*path                 controllers.MainController.index(path)
