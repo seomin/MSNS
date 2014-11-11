@@ -5,16 +5,16 @@ require(["webjars!knockout.js", 'webjars!jquery.js', "/routes.js", "webjars!boot
   messagesPerPage = 10;
   MessagesModel = (function() {
     function MessagesModel() {
-      var self;
-      self = this;
-      this.messages = ko.observableArray();
-      this.messageField = ko.observable();
-      this.nextMessagesUrl = ko.observable();
-      this.prevMessagesUrl = ko.observable();
-      this.saveMessage = function() {
-        return this.ajax(routes.controllers.MessageController.saveMessage(), {
+      var self = this;
+      self.messages = ko.observableArray();
+      self.messageField = ko.observable();
+      self.nextMessagesUrl = ko.observable();
+      self.prevMessagesUrl = ko.observable();
+	  self.Topbartext = ko.observable("NetSpec");
+      self.saveMessage = function() {
+        return self.ajax(routes.controllers.MessageController.saveMessage(), {
           data: JSON.stringify({
-            message: this.messageField()
+            message: self.messageField()
           }),
           contentType: "application/json"
         }).done(function() {
@@ -22,24 +22,24 @@ require(["webjars!knockout.js", 'webjars!jquery.js', "/routes.js", "webjars!boot
           return self.messageField(null);
         });
       };
-      this.getMessages = function() {
-        return this.ajax(routes.controllers.MessageController.getMessages(0, messagesPerPage)).done(function(data, status, xhr) {
+      self.getMessages = function() {
+        return self.ajax(routes.controllers.MessageController.getMessages(0, messagesPerPage)).done(function(data, status, xhr) {
           return self.loadMessages(data, status, xhr);
         });
       };
-      this.nextMessages = function() {
-        if (this.nextMessagesUrl()) {
+      self.nextMessages = function() {
+        if (self.nextMessagesUrl()) {
           return $.ajax({
-            url: this.nextMessagesUrl()
+            url: self.nextMessagesUrl()
           }).done(function(data, status, xhr) {
             return self.loadMessages(data, status, xhr);
           });
         }
       };
-      this.prevMessages = function() {
-        if (this.prevMessagesUrl()) {
+      self.prevMessages = function() {
+        if (self.prevMessagesUrl()) {
           return $.ajax({
-            url: this.prevMessagesUrl()
+            url: self.prevMessagesUrl()
           }).done(function(data, status, xhr) {
             return self.loadMessages(data, status, xhr);
           });
@@ -53,24 +53,24 @@ require(["webjars!knockout.js", 'webjars!jquery.js', "/routes.js", "webjars!boot
 
     MessagesModel.prototype.loadMessages = function(data, status, xhr) {
       var link, next, prev;
-      this.messages(data);
+      self.messages(data);
       link = xhr.getResponseHeader("Link");
       if (link) {
         next = /.*<([^>]*)>; rel="next".*/.exec(link);
         if (next) {
-          this.nextMessagesUrl(next[1]);
+          self.nextMessagesUrl(next[1]);
         } else {
-          this.nextMessagesUrl(null);
+          self.nextMessagesUrl(null);
         }
         prev = /.*<([^>]*)>; rel="prev".*/.exec(link);
         if (prev) {
-          return this.prevMessagesUrl(prev[1]);
+          return self.prevMessagesUrl(prev[1]);
         } else {
-          return this.prevMessagesUrl(null);
+          return self.prevMessagesUrl(null);
         }
       } else {
-        this.nextMessagesUrl(null);
-        return this.prevMessagesUrl(null);
+        self.nextMessagesUrl(null);
+        return self.prevMessagesUrl(null);
       }
     };
 
